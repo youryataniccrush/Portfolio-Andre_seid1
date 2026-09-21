@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>J. ANDRÉ — Case File 001 · The Hollow Road</title>
+  <meta name="description" content="Arquivo confidencial de J. André — Cosplayer Oficial do Dante e do Leon. Jurado WCS·AX·SDCC. Creator Geek." />
+  <meta name="keywords" content="J André, cosplay oficial Dante, cosplay Leon, WCS, Anime Expo, SDCC, jurado cosplay, creator geek" />
+  <meta name="author" content="J. André" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cinzel+Decorative:wght@400;700;900&family=IBM+Plex+Mono:wght@300;400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- GRÃO DE FILME + VIGNETTE -->
+  <div class="film" aria-hidden="true">
+    <div class="film__grain"></div>
+    <div class="film__scratch"></div>
+    <div class="film__vignette"></div>
+  </div>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor">
+    <div class="cursor__stamp">
+      <span class="cursor__stamp-ring"></span>
+      <span class="cursor__stamp-cross">
+        <span></span><span></span>
+      </span>
+    </div>
+    <div class="cursor__label" id="cursorLabel"></div>
+  </div>
+
+  <!-- NAVBAR SUPERIOR -->
+  <header class="topbar" id="topbar">
+    <div class="topbar__inner">
+
+      <a href="#hero" class="topbar__brand">
+        <span class="topbar__brand-mark">◆</span>
+        <div class="topbar__brand-text">
+          <span class="topbar__brand-name">Andre_Seid1</span>
+          <span class="topbar__brand-case">CASE FILE 001 · アンドレ・コスプレ</span>
+        </div>
+      </a>
+
+      <nav class="topbar__nav" id="topbarNav">
+        <a href="#hero"      class="topbar__link" data-idx="01">
+          <span class="topbar__link-idx">01</span>
+          <span class="topbar__link-label">Capa</span>
+        </a>
+        <a href="#sobre"     class="topbar__link" data-idx="02">
+          <span class="topbar__link-idx">02</span>
+          <span class="topbar__link-label">Ficha</span>
+        </a>
+        <a href="#portfolio" class="topbar__link" data-idx="03">
+          <span class="topbar__link-idx">03</span>
+          <span class="topbar__link-label">Evidências</span>
+        </a>
+        <a href="#curriculo" class="topbar__link" data-idx="04">
+          <span class="topbar__link-idx">04</span>
+          <span class="topbar__link-label">Currículo</span>
+        </a>
+        <a href="#contato"   class="topbar__link topbar__link--cta" data-idx="05">
+          <span class="topbar__link-label">Contato</span>
+          <span class="topbar__link-arrow">→</span>
+        </a>
+      </nav>
+
+      <div class="topbar__meta">
+        <span class="topbar__meta-dot"></span>
+        <span class="topbar__meta-text">ATIVO</span>
+        <span class="topbar__meta-sep">·</span>
+        <span class="topbar__meta-clock" id="topbarClock">--:--</span>
+      </div>
+
+      <button class="topbar__toggle" id="topbarToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="topbar__line"></div>
+  </header>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       HERO — CAPA OCUPANDO TODO O TOPO
+       ============================================================ -->
+  <section class="cover" id="hero">
+
+    <!-- BLOCO DA IMAGEM — 100% da largura -->
+    <div class="cover__frame">
+      <figure class="cover__img-wrap">
+        <img
+          src="capa.png"
+          alt="Capa do portfólio — J. André na estrada, tema Supernatural"
+          class="cover__img"
+          loading="eager"
+        />
+      </figure>
+
+      <span class="cover__corner cover__corner--tl"></span>
+      <span class="cover__corner cover__corner--tr"></span>
+      <span class="cover__corner cover__corner--bl"></span>
+      <span class="cover__corner cover__corner--br"></span>
+
+      <div class="cover__tag">
+        <span class="cover__tag-id">CASE FILE 001</span>
+        <span class="cover__tag-mark">◆</span>
+        <span class="cover__tag-year">2024</span>
+      </div>
+    </div>
+
+    <!-- PAINEL INFERIOR -->
+    <div class="cover__panel">
+      <div class="cover__panel-grid">
+
+        <div class="cover__panel-main">
+          <div class="cover__meta-top">
+            <span class="cover__meta-line"></span>
+            <span class="cover__meta-text">ARQUIVO CONFIDENCIAL · CASO Nº 001</span>
+          </div>
+
+          <h1 class="cover__title">
+            <span class="cover__title-small">J.ANDRÉ </span>
+            <span class="cover__title-main">João andre</span>
+            <span class="cover__title-sub">Andre_Seid1</span>
+          </h1>
+
+          <p class="cover__lead">
+            <strong>Cosplayer · Jurado de cosplay · Finalista na </strong><strong>WCS · AX · SDCC</strong>
+            <br> Este é o meu arquivo — e cada personagem, um caso registrado.
+          </p>
+
+          <div class="cover__actions">
+            <a href="#portfolio" class="btn btn--primary" data-cursor="ABRIR">
+              <span class="btn__bg"></span>
+              <span class="btn__text">Abrir arquivo</span>
+              <span class="btn__arrow">→</span>
+            </a>
+            <a href="#curriculo" class="btn btn--ghost" data-cursor="FICHA">
+              <span class="btn__text">Ver credenciais</span>
+            </a>
+          </div>
+        </div>
+
+        <aside class="cover__panel-data">
+          <div class="cover__seal">
+            <div class="cover__seal-inner">
+              <span class="cover__seal-top">HUNTER'S</span>
+              <span class="cover__seal-mid">◆</span>
+              <span class="cover__seal-bot">ARCHIVE</span>
+            </div>
+          </div>
+
+          <dl class="cover__data-list">
+            <div><dt>Nome</dt><dd>J. André</dd></div>
+            <div><dt>Oficiais</dt><dd>Dante · Leon</dd></div>
+            <div><dt>Palcos</dt><dd>WCS · AX · SDCC</dd></div>
+            <div><dt>Atuação</dt><dd>🇺🇸 🇨🇦 🇰🇷</dd></div>
+          </dl>
+        </aside>
+
+      </div>
+
+      <div class="cover__meta-bottom">
+        <div class="cover__stat">
+          <span class="cover__stat-val">WCS · AX · SDCC</span>
+          <span class="cover__stat-lab">FINALISTA</span>
+        </div>
+        <div class="cover__stat">
+          <span class="cover__stat-val">DANTE · LEON · JOTARO</span>
+          <span class="cover__stat-lab">PRINCIPAIS COSPLAYS</span>
+        </div>
+        <div class="cover__stat">
+          <span class="cover__stat-val">ANIME · GAMES · GYM</span>
+          <span class="cover__stat-lab">PILARES</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cover__scroll-hint" aria-hidden="true">
+      <span>ABRIR DOSSIER</span>
+      <span class="cover__scroll-arrow">↓</span>
+    </div>
+  </section>
+
+  <!-- FICHA — SOBRE -->
+  <section class="section section--ficha" id="sobre">
+    <div class="section__fold">
+      <span class="section__fold-mark">◆◆◆</span>
+      <span class="section__fold-label">FOLHA 02 · FICHA DO SUSPEITO</span>
+      <span class="section__fold-mark">◆◆◆</span>
+    </div>
+
+    <div class="container">
+      <header class="section__head">
+        <span class="section__kicker">// SEÇÃO 02 — IDENTIFICAÇÃO</span>
+        <h2 class="section__title">
+          FICHA DO<br />
+          <em>caçador registrado.</em>
+        </h2>
+      </header>
+
+      <div class="ficha">
+        <article class="ficha__paper">
+          <div class="ficha__paper-head">
+            <span class="ficha__paper-mark">FICHA · 001</span>
+            <span class="ficha__paper-stamp">CONFIDENCIAL</span>
+          </div>
+
+          <p class="ficha__lead">
+            "Alguns caçam monstros. Eu caço personagens — e dou vida a eles."
+          </p>
+
+          <p>
+            Sou <strong>João Andre</strong> (<em>@andre_seid1</em>), cosplayer brasileiro com
+            atuação internacional em <strong>🇺🇸 Estados Unidos</strong>,
+            <strong>🇨🇦 Canadá</strong> e <strong>🇰🇷 Coreia do Sul</strong>.
+          </p>
+
+          <p>
+            Atuo como <strong>jurado de cosplay</strong> em competições internacionais,
+            e sou <strong>finalista</strong> nos três maiores palcos do cenário geek
+            mundial: <strong>WCS</strong> (Japão), <strong>AX</strong> (Los Angeles)
+            e <strong>SDCC</strong> (San Diego).
+          </p>
+
+          <p>
+            Como <strong>Creator Geek</strong>, produzo conteúdo, participo de eventos
+            e carrego três pilares que definem minha jornada:
+            <strong>Anime · Games · Gym</strong>.
+          </p>
+
+          <div class="ficha__signature">
+            <span class="ficha__signature-name">J. André</span>
+            <span class="ficha__signature-role">アンドレ・コスプレ · 2024</span>
+          </div>
+        </article>
+
+        <aside class="ficha__data">
+          <header class="ficha__data-head">
+            <span class="ficha__data-mark">◆</span>
+            <span class="ficha__data-title">DADOS REGISTRADOS</span>
+          </header>
+
+          <dl class="ficha__data-list">
+            <div><dt>Nome</dt><dd>J. André</dd></div>
+            <div><dt>Handle</dt><dd>@andre_seid1</dd></div>
+            <div><dt>Principais Cosplays</dt><dd>Dante · Leon · Jotaro</dd></div>
+            <div><dt>Função</dt><dd>Cosplayer · Jurado · Creator</dd></div>
+            <div><dt>Palcos</dt><dd>WCS · AX · SDCC</dd></div>
+            <div><dt>Pilares</dt><dd>Anime · Games · Gym</dd></div>
+            <div><dt>Atuação</dt><dd>🇺🇸 🇨🇦 🇰🇷</dd></div>
+            <div><dt>Status</dt><dd class="ficha__data-online">● ATIVO</dd></div>
+          </dl>
+
+          <div class="ficha__data-stamp">
+            <span class="ficha__data-stamp-ring"></span>
+            <span class="ficha__data-stamp-text">APROVADO<br />PELO<br />ARQUIVO</span>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVIDÊNCIAS — PORTFÓLIO -->
+  <section class="section section--evidencias" id="portfolio">
+    <div class="section__fold">
+      <span class="section__fold-mark">◆◆◆</span>
+      <span class="section__fold-label">FOLHA 03 · EVIDÊNCIAS REGISTRADAS</span>
+      <span class="section__fold-mark">◆◆◆</span>
+    </div>
+
+    <div class="container">
+      <header class="section__head section__head--split">
+        <div>
+          <span class="section__kicker">// SEÇÃO 03 — EVIDÊNCIAS</span>
+          <h2 class="section__title">
+            CASOS<br />
+            <em>arquivados.</em>
+          </h2>
+        </div>
+        <p class="section__desc">
+          Cada personagem é um caso registrado no arquivo.
+          Cada evidência, uma foto. Cada foto, uma cena.
+        </p>
+      </header>
+
+      <div class="evidencias">
+
+        <article class="evidencia reveal">
+          <div class="evidencia__clip" aria-hidden="true"></div>
+          <div class="evidencia__head">
+            <span class="evidencia__id">EVIDÊNCIA #001</span>
+            <span class="evidencia__status evidencia__status--oficial">★ OFICIAL</span>
+          </div>
+          <figure class="evidencia__photo">
+            <img src="dante.png"
+                 alt="Dante — Devil May Cry" loading="lazy" />
+            <figcaption class="evidencia__caption">
+              <span class="evidencia__caption-date">REG. 2024</span>
+              <span class="evidencia__caption-loc">LOC. ???</span>
+            </figcaption>
+          </figure>
+          <div class="evidencia__body">
+            <span class="evidencia__cat">DEVIL MAY CRY · CAPCOM</span>
+            <h3 class="evidencia__title">Dante</h3>
+            <p class="evidencia__text">
+              O caçador de demônios. Reconhecido como cosplay oficial.
+              A interpretação que definiu minha identidade na estrada.
+            </p>
+          </div>
+        </article>
+
+        <article class="evidencia reveal">
+          <div class="evidencia__clip" aria-hidden="true"></div>
+          <div class="evidencia__head">
+            <span class="evidencia__id">EVIDÊNCIA #002</span>
+            <span class="evidencia__status evidencia__status--oficial">★ OFICIAL</span>
+          </div>
+          <figure class="evidencia__photo">
+            <img src="leon.png"
+                 alt="Leon S. Kennedy — Resident Evil" loading="lazy" />
+            <figcaption class="evidencia__caption">
+              <span class="evidencia__caption-date">REG. 2024</span>
+              <span class="evidencia__caption-loc">LOC. RACCOON CITY</span>
+            </figcaption>
+          </figure>
+          <div class="evidencia__body">
+            <span class="evidencia__cat">RESIDENT EVIL · CAPCOM</span>
+            <h3 class="evidencia__title">Leon S. Kennedy</h3>
+            <p class="evidencia__text">
+              O sobrevivente. O agente. O homem que nunca desiste.
+              Cosplay Oficial reconhecido internacionalmente.
+            </p>
+          </div>
+        </article>
+
+        <article class="evidencia reveal">
+          <div class="evidencia__clip" aria-hidden="true"></div>
+          <div class="evidencia__head">
+            <span class="evidencia__id">EVIDÊNCIA #002</span>
+            <span class="evidencia__status evidencia__status--oficial">★ OFICIAL</span>
+          </div>
+          <figure class="evidencia__photo">
+            <img src="jojo.png"
+                 alt="Leon S. Kennedy — Resident Evil" loading="lazy" />
+            <figcaption class="evidencia__caption">
+              <span class="evidencia__caption-date">REG. 2024</span>
+              <span class="evidencia__caption-loc">LOC. RACCOON CITY</span>
+            </figcaption>
+          </figure>
+          <div class="evidencia__body">
+            <span class="evidencia__cat">JoJo's Bizarre Adventure</span>
+            <h3 class="evidencia__title">Kujo Jotaro</h3>
+            <p class="evidencia__text">
+              O estudante delinquente. Detentor do Stand Star Platinum.  
+              Cosplay Oficial reconhecido internacionalmente.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="evidencias__cta">
+        <span class="evidencias__cta-text">// ARQUIVO COMPLETO DO INSTAGRAM DISPONÍVEL NO LINK A BAIXO! </span>
+        <a href="https://www.instagram.com/andre_seid1/" target="_blank" rel="noopener" class="btn btn--primary" data-cursor="INSTAGRAM">
+          <span class="btn__bg"></span>
+          <span class="btn__text">Abrir arquivo externo</span>
+          <span class="btn__arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRÍCULO -->
+  <section class="section section--curriculo" id="curriculo">
+    <div class="section__fold">
+      <span class="section__fold-mark">◆◆◆</span>
+      <span class="section__fold-label">FOLHA 04 · CREDENCIAIS OFICIAIS</span>
+      <span class="section__fold-mark">◆◆◆</span>
+    </div>
+
+    <div class="container">
+      <header class="section__head section__head--split">
+        <div>
+          <span class="section__kicker">// SEÇÃO 04 — CREDENCIAIS</span>
+          <h2 class="section__title">
+            CURRÍCULO<br />
+            <em>do arquivo.</em>
+          </h2>
+        </div>
+        <div class="section__head-actions">
+          <button class="btn btn--primary btn--small" id="cvToggle" data-cursor="ABRIR">
+            <span class="btn__bg"></span>
+            <span class="btn__text">Abrir currículo</span>
+            <span class="btn__arrow">↓</span>
+          </button>
+          <!-- <a href="curriculo-j-andre.pdf" download class="btn btn--ghost btn--small" data-cursor="PDF">
+            <span class="btn__text">Baixar PDF</span>
+            <span class="btn__arrow">⤓</span>
+          </a> -->
+
+        </div>
+      </header>
+
+      <div class="cv" id="cvBlock">
+        <div class="cv__inner">
+
+          <div class="cv__col cv__col--left">
+
+            <section class="cv__block">
+              <header class="cv__block-head">
+                <span class="cv__block-mark">§</span>
+                <h3 class="cv__block-title">PERFIL PROFISSIONAL</h3>
+              </header>
+              <p class="cv__block-text">
+                Cosplayer profissional, jurado de competições e Creator Geek
+                com atuação internacional em <strong>WCS</strong> (Japão),
+                <strong>Anime Expo</strong> (Los Angeles) e <strong>SDCC</strong> (San Diego).
+                Especialista em caracterização,
+                interpretação e produção de conteúdo geek.
+              </p>
+            </section>
+
+            <section class="cv__block">
+              <header class="cv__block-head">
+                <span class="cv__block-mark">§</span>
+                <h3 class="cv__block-title">EXPERIÊNCIA PROFISSIONAL</h3>
+              </header>
+
+              <article class="cv__job">
+                <div class="cv__job-head">
+                  <span class="cv__job-year">2023 — PRESENTE</span>
+                  <span class="cv__job-tag">◆ ATIVO</span>
+                </div>
+                <h4 class="cv__job-role">Jurado de Cosplay</h4>
+                <span class="cv__job-org">Competições nacionais e internacionais</span>
+                <ul class="cv__job-list">
+                  <li>Avaliação técnica e artística de cosplayers em competições oficiais</li>
+                  <li>Análise de caracterização, construção de figurino, interpretação e apresentação</li>
+                  <li>Mentoria informal de novos talentos do cenário</li>
+                </ul>
+              </article>
+
+              <article class="cv__job">
+                <div class="cv__job-head">
+                  <span class="cv__job-year">2022 — PRESENTE</span>
+                  <span class="cv__job-tag">◆ ATIVO</span>
+                </div>
+                <h4 class="cv__job-role">Creator Geek &amp; Conteúdo Digital</h4>
+                <span class="cv__job-org">Produção autoral para plataformas digitais</span>
+                <ul class="cv__job-list">
+                  <li>Criação de conteúdo geek voltado para Anime, Games e Lifestyle</li>
+                  <li>Produção, edição e direção de ensaios fotográficos temáticos</li>
+                  <li>Colaborações com marcas e eventos do setor</li>
+                </ul>
+              </article>
+            </section>
+
+          </div>
+
+          <div class="cv__col cv__col--right">
+
+            <section class="cv__block">
+              <header class="cv__block-head">
+                <span class="cv__block-mark">§</span>
+                <h3 class="cv__block-title">RECONHECIMENTOS</h3>
+              </header>
+              <ul class="cv__achv">
+                <li class="cv__achv-item">
+                  <span class="cv__achv-icon">🥇</span>
+                  <div class="cv__achv-text">
+                    <strong>WCS — World Cosplay Summit</strong>
+                    <span>Finalista · Nagoya, Japão</span>
+                  </div>
+                </li>
+                <li class="cv__achv-item">
+                  <span class="cv__achv-icon">🥈</span>
+                  <div class="cv__achv-text">
+                    <strong>AX — Anime Expo</strong>
+                    <span>Finalista · Los Angeles, EUA</span>
+                  </div>
+                </li>
+                <li class="cv__achv-item">
+                  <span class="cv__achv-icon">🥉</span>
+                  <div class="cv__achv-text">
+                    <strong>SDCC — San Diego Comic-Con</strong>
+                    <span>Finalista · San Diego, EUA</span>
+                  </div>
+                </li>
+                <li class="cv__achv-item">
+                  <span class="cv__achv-icon">★</span>
+                  <div class="cv__achv-text">
+                    <strong>Cosplayer Profissional</strong>
+                    <span>Reconhecimento internacional</span>
+                  </div>
+                </li>
+              </ul>
+            </section>
+
+            <section class="cv__block">
+              <header class="cv__block-head">
+                <span class="cv__block-mark">§</span>
+                <h3 class="cv__block-title">COMPETÊNCIAS</h3>
+              </header>
+              <div class="cv__skills">
+                <span class="cv__skill">Caracterização</span>
+                <span class="cv__skill">Interpretação</span>
+                <span class="cv__skill">Construção de Figurino</span>
+                <span class="cv__skill">Maquiagem</span>
+                <span class="cv__skill">Fotografia</span>
+                <span class="cv__skill">Direção de Cena</span>
+                <span class="cv__skill">Produção de Conteúdo</span>
+                <span class="cv__skill">Edição de Imagem</span>
+                <span class="cv__skill">Eventos &amp; Convenções</span>
+                <span class="cv__skill">Apresentação Pública</span>
+              </div>
+            </section>
+
+            <section class="cv__block">
+              <header class="cv__block-head">
+                <span class="cv__block-mark">§</span>
+                <h3 class="cv__block-title">IDIOMAS</h3>
+              </header>
+              <ul class="cv__lang">
+                <li><span class="cv__lang-name">Português</span><span class="cv__lang-level">Nativo</span></li>
+                <li><span class="cv__lang-name">Inglês</span><span class="cv__lang-level">Avançado</span></li>
+                <li><span class="cv__lang-name">Espanhol</span><span class="cv__lang-level">Intermediário</span></li>
+                <li><span class="cv__lang-name">Japonês</span><span class="cv__lang-level">Básico</span></li>
+              </ul>
+            </section>
+
+            <section class="cv__block">
+              <header class="cv__block-head">
+                <span class="cv__block-mark">§</span>
+                <h3 class="cv__block-title">CONTATO</h3>
+              </header>
+              <ul class="cv__contact">
+                <li><span>Instagram</span><strong>@andre_seid1</strong></li>
+                <li><span>E-mail</span><strong>joaoandre0330@gmail.com</strong></li>
+                <li><span>Base</span><strong>🇧🇷 Brasil · Atuação Internacional</strong></li>
+              </ul>
+            </section>
+
+          </div>
+
+        </div>
+
+        <div class="cv__foot">
+          <span class="cv__foot-mark">◆◆◆</span>
+          <span class="cv__foot-text">FIM DO DOCUMENTO · CASE FILE 001 · J. ANDRÉ</span>
+          <span class="cv__foot-mark">◆◆◆</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="section section--contato" id="contato">
+    <div class="section__fold">
+      <span class="section__fold-mark">◆◆◆</span>
+      <span class="section__fold-label">FOLHA 05 · CANAL DE CONTATO</span>
+      <span class="section__fold-mark">◆◆◆</span>
+    </div>
+
+    <div class="container">
+      <header class="section__head">
+        <span class="section__kicker">// SEÇÃO 05 — TRANSMISSÃO</span>
+        <h2 class="section__title">
+          ABRA UM NOVO<br />
+          <em>caso comigo.</em>
+        </h2>
+      </header>
+
+      <div class="contato">
+        <form class="cform" id="cform" novalidate>
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+          <input type="hidden" name="_subject" value="[CASE FILE] Nova transmissão — J. André" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+
+          <div class="cform__head">
+            <span class="cform__head-mark">◆</span>
+            <span class="cform__head-text">FORMULÁRIO DE TRANSMISSÃO</span>
+            <span class="cform__head-case">CASE #<span id="cformCase">0000</span></span>
+          </div>
+
+          <div class="cform__row">
+            <div class="cform__field">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Como devo te chamar?" required />
+            </div>
+            <div class="cform__field">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+            </div>
+          </div>
+
+          <div class="cform__row">
+            <div class="cform__field">
+              <label for="instagram">Instagram</label>
+              <input type="text" id="instagram" name="instagram" placeholder="@seuperfil" />
+            </div>
+            <div class="cform__field">
+              <label for="motivo">Motivo</label>
+              <select id="motivo" name="motivo">
+                <option value="">Selecione</option>
+                <option value="Parceria / Collab">Parceria / Collab</option>
+                <option value="Juradoria de Competição">Juradoria de Competição</option>
+                <option value="Evento / Convenção">Evento / Convenção</option>
+                <option value="Campanha Publicitária">Campanha Publicitária</option>
+                <option value="Creator Geek / Conteúdo">Creator Geek / Conteúdo</option>
+                <option value="Ensaio Fotográfico">Ensaio Fotográfico</option>
+                <option value="Outro">Outro</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="cform__field">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva o caso..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full" id="cformSubmit" data-cursor="ENVIAR">
+            <span class="btn__bg"></span>
+            <span class="btn__text" id="cformSubmitText">Transmitir mensagem</span>
+            <span class="btn__arrow">→</span>
+          </button>
+
+          <div class="cform__feedback" id="cformFeedback" role="status" aria-live="polite"></div>
+        </form>
+
+        <div class="cstamp" id="cstamp" aria-hidden="true">
+          <div class="cstamp__rings">
+            <span class="cstamp__ring cstamp__ring--1"></span>
+            <span class="cstamp__ring cstamp__ring--2"></span>
+            <span class="cstamp__ring cstamp__ring--3"></span>
+          </div>
+          <div class="cstamp__seal">
+            <svg viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="52" fill="none" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="60" cy="60" r="44" fill="none" stroke="currentColor" stroke-width="0.5" stroke-dasharray="3 5" />
+              <path d="M38 62 L54 78 L84 42" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="cstamp__seal-text">RECEBIDO</span>
+          </div>
+          <h3 class="cstamp__title">Transmissão recebida</h3>
+          <p class="cstamp__text">
+            Sua mensagem foi registrada no arquivo.<br />
+            <strong>Resposta em até 72h.</strong>
+          </p>
+          <button class="cstamp__close" id="cstampClose">Enviar nova transmissão</button>
+        </div>
+
+        <aside class="contato__side">
+          <div class="side-block">
+            <header class="side-block__head">
+              <span class="side-block__mark">◆</span>
+              <span class="side-block__title">CANAIS ATIVOS</span>
+            </header>
+            <a href="https://www.instagram.com/andre_seid1/" target="_blank" rel="noopener" class="side-link">
+              <span class="side-link__icon">◉</span>
+              <div class="side-link__text">
+                <span class="side-link__name">Instagram</span>
+                <span class="side-link__val">@andre_seid1</span>
+              </div>
+              <span class="side-link__arrow">↗</span>
+            </a>
+            <a href="mailto:joaoandre0330@gmail.com" class="side-link">
+              <span class="side-link__icon">✉</span>
+              <div class="side-link__text">
+                <span class="side-link__name">E-mail</span>
+                <span class="side-link__val">joaoandre0330@gmail.com</span>
+              </div>
+              <span class="side-link__arrow">↗</span>
+            </a>
+          </div>
+
+          <div class="side-block side-block--status">
+            <header class="side-block__head">
+              <span class="side-block__mark">◆</span>
+              <span class="side-block__title">STATUS DO ARQUIVO</span>
+            </header>
+            <div class="side-status">
+              <span class="side-status__dot"></span>
+              <span>Em caçada ativa</span>
+            </div>
+            <div class="side-status">
+              <span class="side-status__key">Resposta</span>
+              <span class="side-status__val">até 72h</span>
+            </div>
+            <div class="side-status">
+              <span class="side-status__key">Atuação</span>
+              <span class="side-status__val">🇺🇸 🇨🇦 🇰🇷</span>
+            </div>
+            <div class="side-status">
+              <span class="side-status__key">Disponível</span>
+              <span class="side-status__val">Parcerias</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__bg" aria-hidden="true">CASE FILE 001</div>
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__seal">
+          <span class="footer__seal-mark">◆</span>
+        </div>
+        <div class="footer__brand">
+          <span class="footer__brand-name">J. ANDRÉ</span>
+          <span class="footer__brand-sub">アンドレ・コスプレ · CASE FILE 001</span>
+        </div>
+        <p class="footer__quote">"Saving people. Hunting things. The family business."</p>
+        <div class="footer__links">
+          <a href="https://www.instagram.com/andre_seid1/" target="_blank" rel="noopener">Instagram</a>
+          <a href="mailto:joaoandre0330@gmail.com">E-mail</a>
+          <a href="#curriculo">Currículo</a>
+        </div>
+        <p class="footer__copy">
+          © <span id="footerYear"></span> J. André · Todos os direitos reservados ·
+          <span class="footer__copy-mark">ARQUIVO CLASSIFICADO</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
